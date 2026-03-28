@@ -10,7 +10,6 @@
 
 ![screenshot](https://github.com/ArchitectOfTheOasis/oasis-in-space/blob/17b2b74eecaeee730b949714321f3f362e0d17b7/oasis-screenshot.jpg)
 
----
 ## ABOUT THE PROJECT
 
 This "game" is a current snapshot of my progress of the last ~6 month learning GameDev from
@@ -105,25 +104,25 @@ during the process.
 ---
 ## DISCLAIMER
 
-• Earlier systems remain as-is due to prioritizing feature progress 
+ • Earlier systems remain as-is due to prioritizing feature progress 
   over refactoring. 
-• Refactor ideas and architectural debt are Documented in
+ • Refactor ideas and architectural debt are Documented in
   the Header section.
-• Documentation may not be complete.
+ • Documentation may not be complete.
 
 
 
 ---
 ## WHAT I LEARNED
 
-• Documentation is essential for a maintainable long term project
-• Make it work first, then make it clean (Shipping >= Perfection)
-• Early exit pattern
-• Bool return pattern
-• Function Typing (void, bool, etc.)
-• Advanced Error handling with 'assert' & 'push_error'
-• Data driven design
-• File I/O
+ • Documentation is essential for a maintainable long term project
+ • Make it work first, then make it clean (Shipping >= Perfection)
+ • Early exit pattern
+ • Bool return pattern
+ • Function Typing (void, bool, etc.)
+ • Advanced Error handling with 'assert' & 'push_error'
+ • Data driven design
+ • File I/O
 
 
 
@@ -139,7 +138,7 @@ during the process.
 
 ### Play the demo
 
-1. Open the .exe or .app @If export available
+No tested export available yet. Run inside the project (see above)
 
 Tested on: macOS
 
@@ -148,10 +147,10 @@ Tested on: macOS
 ---
 ## DEMO LIMITATIONS
 
-• For demo reasons currently only allows to add/remove the same item until I 
+ • For demo reasons currently only allows to add/remove the same item until I 
   implement real use world drops. (Key: I = Add item, O = Remove item)
-• A different item can be spawned with (Key: Q)
-• Due to the Scene Transition System the inventory gets deleted by scene switch.
+ • A different item can be spawned with (Key: Q)
+ • Due to the Scene Transition System the inventory gets deleted by scene switch.
 
 
 
@@ -159,19 +158,29 @@ Tested on: macOS
 ## CONTROLS
 
 WASD | Movement
+
 Shift | Sneak
+
 Right Mouse | Open Door
+
 Left Mouse | Button Interaction
 
 Enter | Next Loop (Day)
+
 Z | Zoom in
+
 \+ | Zoom in
+
 \- | Zoom out
 
 E | Toggle inventory
+
 I | Add Item to inventory
+
 O | Remove Item from inventory
+
 Q | Spawn Item
+
 F3 | Debug Menu
 
 
