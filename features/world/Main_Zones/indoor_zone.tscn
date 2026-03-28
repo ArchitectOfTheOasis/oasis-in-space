@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxkjqkuyx020n"]
+
+[ext_resource type="Script" uid="uid://dxog32w81ygw0" path="res://features/world/Main_Zones/indoor_zone.gd" id="1_xbxu5"]
+[ext_resource type="PackedScene" uid="uid://uxkavgrh10ik" path="res://features/player/player.tscn" id="1_xfml4"]
+[ext_resource type="PackedScene" uid="uid://cp1ph5bnhov8x" path="res://features/player/camera/camera.tscn" id="2_xbxu5"]
+[ext_resource type="PackedScene" uid="uid://bdhar8vvp6p8f" path="res://features/world/Buildings/greenhouse.tscn" id="3_0btlo"]
+[ext_resource type="PackedScene" uid="uid://c6e17bvtucjbr" path="res://features/scene_transition/transition_area.tscn" id="4_al5eb"]
+[ext_resource type="PackedScene" uid="uid://13eivmwmfkxm" path="res://features/entities/alien_pet.tscn" id="6_0btlo"]
+
+[node name="Indoor" type="Node2D" groups=["Zone"]]
+y_sort_enabled = true
+script = ExtResource("1_xbxu5")
+scene_id = 1
+
+[node name="Player" parent="." instance=ExtResource("1_xfml4")]
+camera_path = NodePath("Camera2")
+
+[node name="Camera2" parent="Player" instance=ExtResource("2_xbxu5")]
+limit_enabled = false
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.1
+drag_top_margin = 0.1
+drag_right_margin = 0.1
+drag_bottom_margin = 0.1
+
+[node name="Greenhouse" parent="." instance=ExtResource("3_0btlo")]
+
+[node name="Spawn_And_Exit" parent="." instance=ExtResource("4_al5eb")]
+position = Vector2(0, 144)
+spawnpoint_id = 1
+target_spawnpoint = 0
+
+[node name="AlienPet" parent="." instance=ExtResource("6_0btlo")]
+position = Vector2(-66, 98)

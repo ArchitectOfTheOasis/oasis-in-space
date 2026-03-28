@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://o758umduno7v"]
+
+[ext_resource type="Script" uid="uid://4orhm3im7esq" path="res://core/helpers/debug_ui.gd" id="1_a7nfk"]
+
+[sub_resource type="Theme" id="Theme_k61it"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a7nfk"]
+
+[node name="Debug UI" type="CanvasLayer"]
+script = ExtResource("1_a7nfk")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabContainer" type="TabContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_k61it")
+theme_override_constants/side_margin = 0
+theme_override_constants/tab_separation = 0
+theme_override_constants/icon_separation = 0
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 10
+theme_override_styles/panel = SubResource("StyleBoxEmpty_a7nfk")
+clip_tabs = false
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 46.0

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://8fl77lnawoj7"]
+
+[ext_resource type="Script" uid="uid://bcpj0iy1h2sb5" path="res://features/items/item_resource.gd" id="1_fbdei"]
+[ext_resource type="Texture2D" uid="uid://boa6icfe7yo78" path="res://assets/items/tools/copper_pickaxe.png" id="2_0gypd"]
+
+[resource]
+script = ExtResource("1_fbdei")
+item_id = 2
+type = 1
+texture = ExtResource("2_0gypd")
+flavor_text = "Mine that shit!"
+metadata/_custom_type_script = "uid://bcpj0iy1h2sb5"

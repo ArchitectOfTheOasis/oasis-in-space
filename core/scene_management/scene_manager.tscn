@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsuph6hmp4821"]
+
+[ext_resource type="Script" uid="uid://blipkywub3m7r" path="res://core/scene_management/scene_manager.gd" id="1_otley"]
+[ext_resource type="PackedScene" uid="uid://5v7dlrgqdlvy" path="res://features/scene_transition/transition_screen.tscn" id="2_h7bjm"]
+[ext_resource type="PackedScene" uid="uid://cyg86nake785h" path="res://features/world/Main_Zones/main_zone.tscn" id="2_njwa1"]
+[ext_resource type="PackedScene" uid="uid://dxkjqkuyx020n" path="res://features/world/Main_Zones/indoor_zone.tscn" id="3_abpxe"]
+[ext_resource type="Script" uid="uid://7tceoj64phg" path="res://core/spawnpoints/spawnpoint_registry.gd" id="3_njwa1"]
+
+[node name="Scene Manager" type="Node"]
+script = ExtResource("1_otley")
+scenes = Dictionary[int, PackedScene]({
+0: ExtResource("2_njwa1"),
+1: ExtResource("3_abpxe")
+})
+
+[node name="transition_screen" parent="." instance=ExtResource("2_h7bjm")]
+unique_name_in_owner = true
+
+[node name="Spawnpoint Registry" type="Node" parent="."]
+script = ExtResource("3_njwa1")

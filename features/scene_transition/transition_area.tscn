@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6e17bvtucjbr"]
+
+[ext_resource type="Script" uid="uid://ctsadsj4kku7g" path="res://features/scene_transition/transition_area.gd" id="1_ba104"]
+[ext_resource type="PackedScene" uid="uid://di8vj82dtyp8v" path="res://core/spawnpoints/spawnpoint.tscn" id="2_r0rcv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_du7xr"]
+size = Vector2(32, 16)
+
+[node name="Spawn_And_Exit" type="Area2D" groups=["SceneTransition"]]
+script = ExtResource("1_ba104")
+spawnpoint_id = "Indoor_One"
+target_spawnpoint = "Building_One"
+target_direction = 2
+
+[node name="Switch_Scene_Area" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_du7xr")
+debug_color = Color(0.56067526, 0.39593607, 1, 0.41960785)
+
+[node name="Spawnpoint" parent="." instance=ExtResource("2_r0rcv")]
+position = Vector2(0, -31)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

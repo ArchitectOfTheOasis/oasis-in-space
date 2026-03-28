@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dofengr8pib2"]
+
+[ext_resource type="Script" uid="uid://b1tvguj64nmux" path="res://core/systems/input_manager.gd" id="1_mb61u"]
+
+[node name="input_manager" type="Node"]
+script = ExtResource("1_mb61u")

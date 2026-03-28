@@ -1,0 +1,11 @@
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://dgmlgai1dynel"]
+
+[ext_resource type="PackedScene" uid="uid://dixkosva21k5" path="res://features/world/objects/bed.tscn" id="1_kq18b"]
+[ext_resource type="PackedScene" uid="uid://dxh4mfno8d75j" path="res://features/world/windchime.tscn" id="2_2uj02"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_drk2s"]
+scenes/1/scene = ExtResource("1_kq18b")
+scenes/2/scene = ExtResource("2_2uj02")
+
+[resource]
+sources/0 = SubResource("TileSetScenesCollectionSource_drk2s")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://cgbqvvk10u7hr"]
+
+[ext_resource type="Script" uid="uid://bcpj0iy1h2sb5" path="res://features/items/item_resource.gd" id="1_bfg7h"]
+[ext_resource type="Texture2D" uid="uid://2cok5tnutguw" path="res://assets/items/tools/copper_axe.png" id="2_6c2jd"]
+
+[resource]
+script = ExtResource("1_bfg7h")
+item_name = "Copper Axe"
+item_id = 1
+type = 1
+texture = ExtResource("2_6c2jd")
+flavor_text = "Chop it"
+metadata/_custom_type_script = "uid://bcpj0iy1h2sb5"

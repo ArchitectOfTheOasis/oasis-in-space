@@ -1,0 +1,2 @@
+extends WorldScene
+class_name MainZone

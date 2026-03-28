@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://tmwb7esm70yc"]
+
+[ext_resource type="Script" uid="uid://dw800t2lwvrne" path="res://features/scene_transition/transition_door.gd" id="1_v546f"]
+[ext_resource type="PackedScene" uid="uid://dofengr8pib2" path="res://core/autoload/input_manager.tscn" id="2_4vic7"]
+[ext_resource type="PackedScene" uid="uid://di8vj82dtyp8v" path="res://core/spawnpoints/spawnpoint.tscn" id="3_mtnkx"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ioc2y"]
+radius = 13.0
+height = 38.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uv2x4"]
+size = Vector2(32, 18)
+
+[node name="Door_Entry" type="Node2D" groups=["SceneTransition"]]
+script = ExtResource("1_v546f")
+input_manager_path = NodePath("input_manager")
+target_scene_id = 1
+
+[node name="input_manager" parent="." instance=ExtResource("2_4vic7")]
+
+[node name="Door" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2(0, -19)
+shape = SubResource("CapsuleShape2D_ioc2y")
+
+[node name="Player_Detection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player_Detection"]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_uv2x4")
+
+[node name="Spawnpoint" parent="." instance=ExtResource("3_mtnkx")]
+position = Vector2(0, 18)
+
+[connection signal="mouse_entered" from="Door" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Door" to="." method="_on_mouse_exited"]
+[connection signal="body_entered" from="Player_Detection" to="." method="_on_player_detection_body_entered"]
+[connection signal="body_exited" from="Player_Detection" to="." method="_on_player_detection_body_exited"]

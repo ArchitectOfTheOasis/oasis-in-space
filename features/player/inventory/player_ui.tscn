@@ -1,0 +1,103 @@
+[gd_scene load_steps=12 format=3 uid="uid://brp6fswbqgkbe"]
+
+[ext_resource type="Script" uid="uid://dvdb12cyvwf8n" path="res://features/player/inventory/player_ui.gd" id="1_32vxy"]
+[ext_resource type="Texture2D" uid="uid://bp7kpkkogb463" path="res://assets/ui/Statbars/oxygen_bar_frame.png" id="1_a4em4"]
+[ext_resource type="Texture2D" uid="uid://bqv3w7ix8lwxt" path="res://assets/ui/Statbars/oxygen_bar_progress.png" id="2_gxl1c"]
+[ext_resource type="Texture2D" uid="uid://bfcdhkl2nvbao" path="res://assets/ui/Statbars/energy_bar_frame.png" id="3_vg8o0"]
+[ext_resource type="Texture2D" uid="uid://8mlg2v646qaq" path="res://assets/ui/Statbars/energy_bar_progress.png" id="4_hiloj"]
+[ext_resource type="Texture2D" uid="uid://0pgy51jrq72r" path="res://assets/ui/Statbars/health_bar_frame.png" id="5_cbg41"]
+[ext_resource type="Texture2D" uid="uid://c4hbuv5k6eksp" path="res://assets/ui/Statbars/health_bar_progress.png" id="6_babf8"]
+[ext_resource type="PackedScene" uid="uid://bqfn6bc0y2fg6" path="res://core/options/menu_button.tscn" id="7_ixmjf"]
+[ext_resource type="Texture2D" uid="uid://cnb4uhhhjwcxe" path="res://assets/ui/options/menu_label_'save''.png" id="8_tk1vm"]
+[ext_resource type="Texture2D" uid="uid://bs3a3breabfo8" path="res://assets/ui/options/menu_label_'load'.png" id="9_32vxy"]
+[ext_resource type="Texture2D" uid="uid://r5kx1n8d2dk5" path="res://assets/ui/options/menu_label_'options'.png" id="9_wivoa"]
+
+[node name="Player_UI" type="CanvasLayer"]
+script = ExtResource("1_32vxy")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Mindestabstand" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="StatBars" type="HBoxContainer" parent="Control/Mindestabstand"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/separation = 3
+
+[node name="OxygenProgressBar" type="TextureProgressBar" parent="Control/Mindestabstand/StatBars"]
+layout_mode = 2
+value = 78.0
+fill_mode = 3
+texture_under = ExtResource("1_a4em4")
+texture_progress = ExtResource("2_gxl1c")
+
+[node name="StaminaProgressBar" type="TextureProgressBar" parent="Control/Mindestabstand/StatBars"]
+layout_mode = 2
+value = 100.0
+fill_mode = 3
+texture_under = ExtResource("3_vg8o0")
+texture_progress = ExtResource("4_hiloj")
+
+[node name="HealthProgressBar" type="TextureProgressBar" parent="Control/Mindestabstand/StatBars"]
+layout_mode = 2
+value = 100.0
+fill_mode = 3
+texture_under = ExtResource("5_cbg41")
+texture_progress = ExtResource("6_babf8")
+
+[node name="MenuButtons" type="VBoxContainer" parent="Control/Mindestabstand"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="OptionsButton" parent="Control/Mindestabstand/MenuButtons" instance=ExtResource("7_ixmjf")]
+visible = false
+layout_mode = 2
+action = 2
+label_texture = ExtResource("9_wivoa")
+
+[node name="SaveButton" parent="Control/Mindestabstand/MenuButtons" instance=ExtResource("7_ixmjf")]
+layout_mode = 2
+label_texture = ExtResource("8_tk1vm")
+
+[node name="LoadButton" parent="Control/Mindestabstand/MenuButtons" instance=ExtResource("7_ixmjf")]
+layout_mode = 2
+action = 1
+label_texture = ExtResource("9_32vxy")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -32.0
+offset_right = 16.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16

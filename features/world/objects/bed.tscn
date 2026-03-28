@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://dixkosva21k5"]
+
+[ext_resource type="Texture2D" uid="uid://b1hxpg3hfgap0" path="res://assets/sprites/tilemap/objects/bed.png" id="1_h36jf"]
+[ext_resource type="Script" uid="uid://dxgego00a61r0" path="res://features/world/objects/bed.gd" id="1_ojfob"]
+[ext_resource type="Texture2D" uid="uid://bv142u3c1ujwl" path="res://assets/sprites/tilemap/objects/bed_blanket.png" id="2_ojfob"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vjgnw"]
+size = Vector2(4, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojfob"]
+size = Vector2(16, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wq8t1"]
+size = Vector2(16, 19)
+
+[node name="Bed" type="Area2D"]
+y_sort_enabled = true
+script = ExtResource("1_ojfob")
+
+[node name="SaveArea" type="CollisionShape2D" parent="."]
+z_index = 3
+position = Vector2(0, 8.5)
+shape = SubResource("RectangleShape2D_vjgnw")
+debug_color = Color(0.8928526, 0.16856596, 0.6789523, 0.41960785)
+
+[node name="Bed" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -9)
+texture = ExtResource("1_h36jf")
+offset = Vector2(0, 9)
+
+[node name="Blanket" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, 18)
+texture = ExtResource("2_ojfob")
+offset = Vector2(0, -18)
+
+[node name="Fußteil" type="StaticBody2D" parent="."]
+position = Vector2(0, -7)
+
+[node name="Physicsshape" type="CollisionShape2D" parent="Fußteil"]
+position = Vector2(0, 28)
+shape = SubResource("RectangleShape2D_ojfob")
+
+[node name="Kopfteil" type="StaticBody2D" parent="."]
+position = Vector2(0, -7)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kopfteil"]
+position = Vector2(0, 7.5)
+shape = SubResource("RectangleShape2D_wq8t1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

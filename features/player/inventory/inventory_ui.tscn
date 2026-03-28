@@ -1,0 +1,249 @@
+[gd_scene load_steps=6 format=3 uid="uid://bdjvfl2jvov75"]
+
+[ext_resource type="Texture2D" uid="uid://sdet6bvo5a5b" path="res://assets/ui/Inventory/inventory placeholder.png" id="1_5v8q7"]
+[ext_resource type="Script" uid="uid://cvs5p4axtmmbf" path="res://features/player/inventory/inventory_ui.gd" id="1_gf3dx"]
+[ext_resource type="PackedScene" uid="uid://0w2hf5y0bgk3" path="res://features/player/inventory/inventory_manager.tscn" id="2_al38l"]
+[ext_resource type="PackedScene" uid="uid://pijcwt48tg4u" path="res://features/player/inventory/slot.tscn" id="3_34y5v"]
+[ext_resource type="Texture2D" uid="uid://cs2dssdoc5fje" path="res://assets/ui/Inventory/hotbar.png" id="5_70kay"]
+
+[node name="Inventory UI" type="CanvasLayer"]
+script = ExtResource("1_gf3dx")
+
+[node name="Inventory Manager" parent="." instance=ExtResource("2_al38l")]
+unique_name_in_owner = true
+
+[node name="Main Inventory" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Main Inventory" type="TextureRect" parent="Main Inventory"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -123.0
+offset_top = -51.5
+offset_right = 123.0
+offset_bottom = 51.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_5v8q7")
+stretch_mode = 3
+
+[node name="Main Slots" type="GridContainer" parent="Main Inventory/Main Inventory"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.020000001
+anchor_top = 0.046000004
+anchor_right = 0.98
+anchor_bottom = 0.72300005
+offset_left = 0.07999945
+offset_top = -1.2380004
+offset_right = -0.08000183
+offset_bottom = 0.03099823
+theme_override_constants/v_separation = 5
+columns = 10
+
+[node name="Slot" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot2" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot3" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot4" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot5" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot6" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot7" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot8" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot9" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot10" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot11" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot12" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot13" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot14" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot15" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot16" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot17" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot18" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot19" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot20" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot21" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot22" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot23" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot24" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot25" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot26" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot27" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot28" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot29" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot30" parent="Main Inventory/Main Inventory/Main Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Shared Slots" type="HBoxContainer" parent="Main Inventory/Main Inventory"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0040001
+offset_left = 5.0
+offset_top = 78.5
+offset_right = -5.0
+offset_bottom = -4.91201
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Slot" parent="Main Inventory/Main Inventory/Shared Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot2" parent="Main Inventory/Main Inventory/Shared Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot3" parent="Main Inventory/Main Inventory/Shared Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot4" parent="Main Inventory/Main Inventory/Shared Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot5" parent="Main Inventory/Main Inventory/Shared Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot6" parent="Main Inventory/Main Inventory/Shared Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot7" parent="Main Inventory/Main Inventory/Shared Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot8" parent="Main Inventory/Main Inventory/Shared Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot9" parent="Main Inventory/Main Inventory/Shared Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot10" parent="Main Inventory/Main Inventory/Shared Slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Hotbar" type="TextureRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -32.0
+offset_right = 123.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("5_70kay")
+stretch_mode = 4
+
+[node name="hotbar_slots" type="HBoxContainer" parent="Hotbar"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 4.0
+offset_right = -5.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="Slot" parent="Hotbar/hotbar_slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot2" parent="Hotbar/hotbar_slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot3" parent="Hotbar/hotbar_slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot4" parent="Hotbar/hotbar_slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot5" parent="Hotbar/hotbar_slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot6" parent="Hotbar/hotbar_slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot7" parent="Hotbar/hotbar_slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot8" parent="Hotbar/hotbar_slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot9" parent="Hotbar/hotbar_slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2
+
+[node name="Slot10" parent="Hotbar/hotbar_slots" instance=ExtResource("3_34y5v")]
+layout_mode = 2

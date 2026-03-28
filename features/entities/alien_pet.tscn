@@ -1,0 +1,92 @@
+[gd_scene load_steps=11 format=3 uid="uid://13eivmwmfkxm"]
+
+[ext_resource type="Texture2D" uid="uid://barjngxev44v7" path="res://assets/items/item_shadow.png" id="1_bkniv"]
+[ext_resource type="Texture2D" uid="uid://d2k7hhepjxl3w" path="res://assets/sprites/entities/animals/AlienPet_idle_right.png" id="2_l4qll"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bkniv"]
+radius = 3.0
+height = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awsfg"]
+atlas = ExtResource("2_l4qll")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vcs25"]
+atlas = ExtResource("2_l4qll")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nuo6"]
+atlas = ExtResource("2_l4qll")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cqtv7"]
+atlas = ExtResource("2_l4qll")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0m0ts"]
+atlas = ExtResource("2_l4qll")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7x3p"]
+atlas = ExtResource("2_l4qll")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oeffl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awsfg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcs25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nuo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqtv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0m0ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o7x3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0m0ts")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cqtv7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nuo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vcs25")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="AlienPet" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 3)
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_bkniv")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+z_index = -1
+y_sort_enabled = true
+position = Vector2(1, 0)
+texture = ExtResource("1_bkniv")
+offset = Vector2(0, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+sprite_frames = SubResource("SpriteFrames_oeffl")
+autoplay = "default"
+frame_progress = 0.75987494
+offset = Vector2(0, 2)

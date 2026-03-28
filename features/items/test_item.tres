@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemResource" load_steps=3 format=3 uid="uid://ciaei4sk7w62c"]
+
+[ext_resource type="Script" uid="uid://bcpj0iy1h2sb5" path="res://features/items/item_resource.gd" id="1_tx1t6"]
+[ext_resource type="Texture2D" uid="uid://c271vwa4aj1et" path="res://assets/items/tools/copper_hoe.png" id="2_x8rlg"]
+
+[resource]
+script = ExtResource("1_tx1t6")
+item_name = "coppper_hoe"
+item_id = 3
+type = 1
+texture = ExtResource("2_x8rlg")
+flavor_text = "No text."
+metadata/_custom_type_script = "uid://bcpj0iy1h2sb5"

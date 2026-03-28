@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bi62lmvxdmxx7"]
+
+[ext_resource type="Script" uid="uid://brt3poevjb6lb" path="res://core/autoload/global_manager.gd" id="1_1wyxm"]
+
+[node name="GlobalManager" type="Node"]
+script = ExtResource("1_1wyxm")
