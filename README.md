@@ -1,11 +1,14 @@
 # Stardew Valley inspired Game Architecture Study
 
-Engine: Godot v4.5
-Language: GDScript
-Status: In Development
-Tools: Notion, ChatGPT, Claude, Gemini, Godot Docs, YouTube, Excalidraw, Procreate
+**Engine:** Godot v4.5
 
-![screenshot](URL)
+**Language:** GDScript
+
+**Status:** In Development
+
+**Tools:** Notion, ChatGPT, Claude, Gemini, Godot Docs, YouTube, Excalidraw, Procreate, Aseprite
+
+![screenshot](https://github.com/ArchitectOfTheOasis/oasis-in-space/blob/17b2b74eecaeee730b949714321f3f362e0d17b7/oasis-screenshot.jpg)
 
 
 ## ABOUT THE PROJECT
@@ -35,42 +38,42 @@ during the process.
 
 ### Save System
 
-• Observer-pattern based save data registry - decouples objects from 'SaveManager'
-  allowing any object to register without direct dependency.
-• Automatic save slot rotation - Three save slots, new saves delete the oldest.
-• Unified PROCESSING_MODE enum - Save and Load share the same initiation pipeline,
-  reducing redundant code
+	• Observer-pattern based save data registry - decouples objects from 'SaveManager'
+	  allowing any object to register without direct dependency.
+	• Automatic save slot rotation - Three save slots, new saves delete the oldest.
+	• Unified PROCESSING_MODE enum - Save and Load share the same initiation pipeline,
+	  reducing redundant code
 
 ### Inventory 
 
-• Dynamic slot registry - InventoryUI detects and registers slots at runtime
-  allowing inventory size changes without code modifications.
-• Snapshot based inventory UI updates to avoid rebuilding whole inventory 
-• Backwards iteration at item removal for good game feel.
+	• Dynamic slot registry - InventoryUI detects and registers slots at runtime
+	  allowing inventory size changes without code modifications.
+	• Snapshot based inventory UI updates to avoid rebuilding whole inventory 
+	• Backwards iteration at item removal for good game feel.
 
 ### Finite State Machine for player behaviour
-
-• ID-based automatic state registration - new states self-register on _ready()
-• Clean state separation - each state owns its own enter/exit/process logic, 
-  the FSM only coordinates transitions.
+	
+	• ID-based automatic state registration - new states self-register on _ready()
+	• Clean state separation - each state owns its own enter/exit/process logic, 
+	  the FSM only coordinates transitions.
 
 
 ### Scene Transition System 
 
-• ID-based spawnpoint registry via EventBus. Decouples scene objects from the 
-  SceneManager.
-• Gate pattern - scene transition only completes when all relevant objects are
-  initialized avoiding race conditions.
-• Inheritance-based trigger and ID system. 'SceneTransitionTrigger' as base class,
-  providing logic throughout multiple scripts.
+	• ID-based spawnpoint registry via EventBus. Decouples scene objects from the 
+	  SceneManager.
+	• Gate pattern - scene transition only completes when all relevant objects are
+	  initialized avoiding race conditions.
+	• Inheritance-based trigger and ID system. 'SceneTransitionTrigger' as base class,
+	  providing logic throughout multiple scripts.
 
 
 ### Player Animation Manager
 
-• Automated name mapping - animation names are generated dynamically based on
-  direction and state using global enums, avoiding hardcoded string names.
-• SSOT - one system handles all the player animation logic, the player only emits 
-  state changes.
+	• Automated name mapping - animation names are generated dynamically based on
+      direction and state using global enums, avoiding hardcoded string names.
+	• SSOT - one system handles all the player animation logic, the player only emits 
+      state changes.
 
 
 
