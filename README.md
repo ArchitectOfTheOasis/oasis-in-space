@@ -12,8 +12,7 @@
 
 ## ABOUT THE PROJECT
 
-This "game" is a current snapshot of my progress of the last ~6 month learning GameDev from
-scratch, without programming background.
+This "game" is a current snapshot of the last ~6 months of self-directed game development study starting without programming background.
 
 It will become a top-down farming simulator set in space, inspired by Stardew Valley. 
 A spiritual experience where the player manages resources, 
@@ -22,12 +21,12 @@ Instead of "days" the time is measured in 'loops'. Each loop will create a new
 save file.
 
 The current build demonstrates the core architecture systems as the game foundation.
-Gameplay features are actively being implemented in the next steps.
+Gameplay features are currently in development.
 
-I created this game as the beginning of a long term Project, so I focused 
+I created this game as the beginning of a long-term project, so I focused 
 on flexible decoupled systems to keep it maintainable. My goal was to really
-understand programming and get flexible and independent in the usage.
-AI Tools were used consciously either for code reviews or to reflect myself 
+understand programming and get flexible and independent in my workflow.
+AI Tools were used consciously either for code reviews or to reflect on my decisions
 during the process.
 
 
@@ -77,7 +76,7 @@ during the process.
 
 
 ---
-## ROADMAP 
+## UPCOMING FEATURES
 
 ### Input Manager
 
@@ -89,7 +88,7 @@ during the process.
 	• Plant growing/harvesting system to make use of the inventory.
 		Rudimental Day/Night cycle without Shaders.
 	• Mining - Dropped items get now a use case
-	• Tree Chopping - Dropped items get now a use case
+	• Tree Chopping - gives Dropped items a functional use case
 	
 ### NPC Interaction
 
@@ -97,7 +96,7 @@ during the process.
 	
 ### Audio System
 
-	• Centralized audio system - maybe with a centralized audio file database 
+	• Centralized audio system - with a centralized audio file database 
 
 
 
