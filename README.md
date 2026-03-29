@@ -12,7 +12,7 @@
 
 ## ABOUT THE PROJECT
 
-This "game" is a current snapshot of the last ~6 months of self-directed game development study starting without programming background.
+This project is a snapshot of the last ~6 months of self-directed game development study starting with no prior programming experience.
 
 It will become a top-down farming simulator set in space, inspired by Stardew Valley. 
 A spiritual experience where the player manages resources, 
@@ -25,8 +25,8 @@ Gameplay features are currently in development.
 
 I created this game as the beginning of a long-term project, so I focused 
 on flexible decoupled systems to keep it maintainable. My goal was to really
-understand programming and get flexible and independent in my workflow.
-AI Tools were used consciously either for code reviews or to reflect on my decisions
+understand programming and become flexible and independent in my workflow.
+AI tools were used consciously either for code reviews or to reflect on my decisions
 during the process.
 
 
@@ -38,7 +38,7 @@ during the process.
 
 	• Observer-pattern based save data registry - decouples objects from 'SaveManager'
 	  allowing any object to register without direct dependency.
-	• Automatic save slot rotation - Three save slots, new saves delete the oldest.
+	• Automatic save slot rotation - Three save slots, new saves overwrite the oldest slot.
 	• Unified PROCESSING_MODE enum - Save and Load share the same initiation pipeline,
 	  reducing redundant code
 
@@ -46,8 +46,8 @@ during the process.
 
 	• Dynamic slot registry - InventoryUI detects and registers slots at runtime
 	  allowing inventory size changes without code modifications.
-	• Snapshot based inventory UI updates to avoid rebuilding whole inventory 
-	• Backwards iteration at item removal for good game feel.
+	• Snapshot based inventory UI updates to avoid rebuilding the entire inventory 
+	• Backwards iteration at item removal to improve game feel.
 
 ### Finite State Machine for player behaviour
 	
@@ -61,7 +61,7 @@ during the process.
 	• ID-based spawnpoint registry via EventBus. Decouples scene objects from the 
 	  SceneManager.
 	• Gate pattern - scene transition only completes when all relevant objects are
-	  initialized avoiding race conditions.
+	  initialized, preventing race conditions.
 	• Inheritance-based trigger and ID system. 'SceneTransitionTrigger' as base class,
 	  providing logic throughout multiple scripts.
 
@@ -69,7 +69,7 @@ during the process.
 ### Player Animation Manager
 
 	• Automated name mapping - animation names are generated dynamically based on
-      direction and state using global enums, avoiding hardcoded string names.
+      direction and state using global enums, avoiding hardcoded strings.
 	• SSOT - one system handles all the player animation logic, the player only emits 
       state changes.
 
@@ -80,15 +80,15 @@ during the process.
 
 ### Input Manager
 
-	• Centralized Input manager, to consider UI layers and avoid spread input detection.
+	• Centralized input manager, to handle UI layers, separate world interaction and 
+	  prevent input conflicts.
 	
 ### World Interaction
 
 	• Displaying the selected tile based on the mouse position
 	• Plant growing/harvesting system to make use of the inventory.
-		Rudimental Day/Night cycle without Shaders.
-	• Mining - Dropped items get now a use case
-	• Tree Chopping - gives Dropped items a functional use case
+	  Rudimentary Day/Night cycle without Shaders.
+	• Mining & Tree Chopping - gives dropped items a functional use case
 	
 ### NPC Interaction
 
@@ -105,8 +105,8 @@ during the process.
 
 	• Earlier systems remain as-is due to prioritizing feature progress 
 	  over refactoring. 
-	• Refactor ideas and architectural debt are Documented in
-	  the Header section.
+	• Refactor ideas and architectural debt are documented in
+	  the header section.
 	• Documentation may not be complete.
 
 
